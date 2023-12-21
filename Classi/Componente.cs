@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    public class Class1
+    abstract class Componente
     {
+        public abstract double Costo();
+        public abstract string Descrizione();
     }
 }
