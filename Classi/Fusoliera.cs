@@ -6,30 +6,26 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    class Ala : Componente
+    class Fusoliera : Componente
     {
         // attributi
+        private string _materiale;
         private double _lunghezza;
-        private double _apertura;
         private double _prezzo;
 
         // metodi accessor
+        public string Materiale
+        {
+            get { return _materiale; }
+            set { _materiale = value; }
+        }
         public double Lunghezza
         {
             get { return _lunghezza; }
-            set 
-            { 
-                if(_lunghezza > 0)
-                    _lunghezza = value;
-            }
-        }
-        public double Apertura
-        {
-            get { return _apertura; }
-            set 
+            set
             {
-                if (_apertura > 0)
-                    _apertura = value;
+                if (_lunghezza > 0)
+                    _lunghezza = value;
             }
         }
         public double Prezzo
@@ -39,14 +35,12 @@ namespace Classi
         }
 
         // costruttore
-        public Ala(double _lunghezza, double _apertura, double _prezzo)
+        public Fusoliera(string _materiale, double _lunghezza, double _prezzo)
         {
+            Materiale = _materiale;
             Lunghezza = _lunghezza;
-            Apertura = _apertura;
             Prezzo = _prezzo;
         }
-
-        // metodi
         public override double Costo()
         {
             return Prezzo;
@@ -54,7 +48,7 @@ namespace Classi
 
         public override string Descrizione()
         {
-            return $"Ala - Lunghezza: {Lunghezza}, Apertura: {Apertura}, Prezzo: {Prezzo}";
+            return $"Fusoliera - Materiale: {Materiale}, Lunghezza: {Lunghezza}, Prezzo: {Prezzo}";
         }
     }
 }
