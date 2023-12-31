@@ -46,6 +46,7 @@
     <Compile Include="Coda.cs" />
     <Compile Include="Componente.cs" />
     <Compile Include="Fusoliera.cs" />
+    <Compile Include="Gomma.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
