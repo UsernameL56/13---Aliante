@@ -36,11 +36,23 @@ namespace Classi
         }
 
         // metodi
+
+        public override void Add(Componente componente)
+        {
+            throw new NotImplementedException();
+        }
+        public override void Remove(Componente componente)
+        {
+            throw new NotImplementedException();
+        }
+        public override Componente getChild(int indice)
+        {
+            return null;
+        }
         public override double Costo()
         {
             return Prezzo;
         }
-
         public override string Descrizione()
         {
             return $"Coda - Lunghezza: {Lunghezza}, Prezzo: {Prezzo}";
