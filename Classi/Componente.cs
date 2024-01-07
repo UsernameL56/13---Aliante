@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    abstract class Componente
+    public abstract class Componente
     {
         public abstract double Costo();
         public abstract string Descrizione();
+        public abstract void Add(Componente componente);
+        public abstract void Remove(Componente componente);
+        public abstract Componente getChild(int indice);
+
     }
 }
