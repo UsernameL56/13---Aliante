@@ -24,7 +24,7 @@ namespace Classi
             get { return _lunghezza; }
             set
             {
-                if (_lunghezza > 0)
+                if (value > 0)
                     _lunghezza = value;
             }
         }

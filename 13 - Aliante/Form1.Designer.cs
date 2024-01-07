@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Aggiunta = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Stampa = new System.Windows.Forms.Button();
             this.alaLunghezza = new System.Windows.Forms.TextBox();
             this.alaApertura = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.alaPrezzo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -43,14 +45,22 @@
             this.codaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ruotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.fusolieraPrezzo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.fusolieraLunghezza = new System.Windows.Forms.TextBox();
             this.fusolieraMateriale = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.codaPrezzo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.codaLunghezza = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.gommaPrezzo = new System.Windows.Forms.TextBox();
+            this.cerchionePrezzo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -71,15 +81,15 @@
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // Aggiunta
             // 
-            this.button1.Location = new System.Drawing.Point(18, 271);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Aggiunta";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Aggiunta.Location = new System.Drawing.Point(18, 271);
+            this.Aggiunta.Name = "Aggiunta";
+            this.Aggiunta.Size = new System.Drawing.Size(127, 59);
+            this.Aggiunta.TabIndex = 0;
+            this.Aggiunta.Text = "Aggiunta";
+            this.Aggiunta.UseVisualStyleBackColor = true;
+            this.Aggiunta.Click += new System.EventHandler(this.Aggiunta_Click);
             // 
             // button2
             // 
@@ -99,14 +109,15 @@
             this.button3.Text = "getChild";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Stampa
             // 
-            this.button4.Location = new System.Drawing.Point(151, 336);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 59);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Stampa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Stampa.Location = new System.Drawing.Point(151, 336);
+            this.Stampa.Name = "Stampa";
+            this.Stampa.Size = new System.Drawing.Size(127, 59);
+            this.Stampa.TabIndex = 3;
+            this.Stampa.Text = "Stampa";
+            this.Stampa.UseVisualStyleBackColor = true;
+            this.Stampa.Click += new System.EventHandler(this.Stampa_Click);
             // 
             // alaLunghezza
             // 
@@ -126,6 +137,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.alaPrezzo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.alaLunghezza);
@@ -136,6 +149,24 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ala";
+            this.groupBox1.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(205, 102);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(47, 16);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "prezzo";
+            // 
+            // alaPrezzo
+            // 
+            this.alaPrezzo.Location = new System.Drawing.Point(6, 99);
+            this.alaPrezzo.Multiline = true;
+            this.alaPrezzo.Name = "alaPrezzo";
+            this.alaPrezzo.Size = new System.Drawing.Size(181, 33);
+            this.alaPrezzo.TabIndex = 8;
             // 
             // label2
             // 
@@ -199,6 +230,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.fusolieraPrezzo);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.fusolieraLunghezza);
@@ -209,6 +242,24 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fusoliera";
+            this.groupBox2.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(202, 108);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(47, 16);
+            this.label16.TabIndex = 20;
+            this.label16.Text = "prezzo";
+            // 
+            // fusolieraPrezzo
+            // 
+            this.fusolieraPrezzo.Location = new System.Drawing.Point(6, 102);
+            this.fusolieraPrezzo.Multiline = true;
+            this.fusolieraPrezzo.Name = "fusolieraPrezzo";
+            this.fusolieraPrezzo.Size = new System.Drawing.Size(181, 33);
+            this.fusolieraPrezzo.TabIndex = 9;
             // 
             // label4
             // 
@@ -246,6 +297,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.codaPrezzo);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.codaLunghezza);
             this.groupBox3.Location = new System.Drawing.Point(714, 60);
@@ -254,6 +307,24 @@
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Coda";
+            this.groupBox3.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(205, 66);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(47, 16);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "prezzo";
+            // 
+            // codaPrezzo
+            // 
+            this.codaPrezzo.Location = new System.Drawing.Point(6, 60);
+            this.codaPrezzo.Multiline = true;
+            this.codaPrezzo.Name = "codaPrezzo";
+            this.codaPrezzo.Size = new System.Drawing.Size(181, 33);
+            this.codaPrezzo.TabIndex = 10;
             // 
             // label5
             // 
@@ -274,6 +345,10 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.gommaPrezzo);
+            this.groupBox4.Controls.Add(this.cerchionePrezzo);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.label10);
@@ -286,17 +361,52 @@
             this.groupBox4.Controls.Add(this.gommaAltezza);
             this.groupBox4.Controls.Add(this.cerchioneMateriale);
             this.groupBox4.Controls.Add(this.cerchionePollici);
-            this.groupBox4.Location = new System.Drawing.Point(1065, 60);
+            this.groupBox4.Location = new System.Drawing.Point(1094, 60);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(345, 300);
+            this.groupBox4.Size = new System.Drawing.Size(345, 381);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ruota";
+            this.groupBox4.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(216, 148);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 16);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "prezzo";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(213, 340);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 16);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "prezzo";
+            // 
+            // gommaPrezzo
+            // 
+            this.gommaPrezzo.Location = new System.Drawing.Point(15, 337);
+            this.gommaPrezzo.Multiline = true;
+            this.gommaPrezzo.Name = "gommaPrezzo";
+            this.gommaPrezzo.Size = new System.Drawing.Size(181, 33);
+            this.gommaPrezzo.TabIndex = 16;
+            // 
+            // cerchionePrezzo
+            // 
+            this.cerchionePrezzo.Location = new System.Drawing.Point(15, 141);
+            this.cerchionePrezzo.Multiline = true;
+            this.cerchionePrezzo.Name = "cerchionePrezzo";
+            this.cerchionePrezzo.Size = new System.Drawing.Size(181, 33);
+            this.cerchionePrezzo.TabIndex = 15;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(68, 154);
+            this.label12.Location = new System.Drawing.Point(68, 201);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 16);
             this.label12.TabIndex = 10;
@@ -305,7 +415,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(213, 254);
+            this.label11.Location = new System.Drawing.Point(213, 301);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(46, 16);
             this.label11.TabIndex = 14;
@@ -314,7 +424,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(213, 215);
+            this.label10.Location = new System.Drawing.Point(213, 262);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 16);
             this.label10.TabIndex = 13;
@@ -323,7 +433,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(213, 176);
+            this.label9.Location = new System.Drawing.Point(213, 223);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 16);
             this.label9.TabIndex = 10;
@@ -358,7 +468,7 @@
             // 
             // gommaRaggio
             // 
-            this.gommaRaggio.Location = new System.Drawing.Point(15, 251);
+            this.gommaRaggio.Location = new System.Drawing.Point(15, 298);
             this.gommaRaggio.Multiline = true;
             this.gommaRaggio.Name = "gommaRaggio";
             this.gommaRaggio.Size = new System.Drawing.Size(181, 33);
@@ -366,7 +476,7 @@
             // 
             // gommaLarghezza
             // 
-            this.gommaLarghezza.Location = new System.Drawing.Point(15, 212);
+            this.gommaLarghezza.Location = new System.Drawing.Point(15, 259);
             this.gommaLarghezza.Multiline = true;
             this.gommaLarghezza.Name = "gommaLarghezza";
             this.gommaLarghezza.Size = new System.Drawing.Size(181, 33);
@@ -374,7 +484,7 @@
             // 
             // gommaAltezza
             // 
-            this.gommaAltezza.Location = new System.Drawing.Point(15, 173);
+            this.gommaAltezza.Location = new System.Drawing.Point(15, 220);
             this.gommaAltezza.Multiline = true;
             this.gommaAltezza.Name = "gommaAltezza";
             this.gommaAltezza.Size = new System.Drawing.Size(181, 33);
@@ -416,10 +526,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.Stampa);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Aggiunta);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -443,10 +553,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Aggiunta;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Stampa;
         private System.Windows.Forms.TextBox alaLunghezza;
         private System.Windows.Forms.TextBox alaApertura;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -479,6 +589,16 @@
         private System.Windows.Forms.TextBox cerchionePollici;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox alaPrezzo;
+        private System.Windows.Forms.TextBox fusolieraPrezzo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox codaPrezzo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox gommaPrezzo;
+        private System.Windows.Forms.TextBox cerchionePrezzo;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }
 

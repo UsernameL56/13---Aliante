@@ -56,7 +56,12 @@ namespace Classi
         }
         public override string Descrizione()
         {
-            return $"Aliante - {Componenti.ToString()}";
+            string stringa = "";
+            foreach(Componente componente in Componenti)
+            {
+                stringa += componente.Descrizione() + "\n";
+            }
+            return $"Aliante - {stringa}";
         }
     }
 }
