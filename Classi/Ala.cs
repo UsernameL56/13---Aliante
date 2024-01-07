@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    class Ala : Componente
+    public class Ala : Componente
     {
         // attributi
         private double _lunghezza;

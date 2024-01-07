@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    class Cerchione : Componente
+    public class Cerchione : Componente
     {
         // attributi
         private double _pollici;

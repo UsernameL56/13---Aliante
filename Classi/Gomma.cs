@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    class Gomma : Componente
+    public class Gomma : Componente
     {
         // attributi
         private double _altezza;

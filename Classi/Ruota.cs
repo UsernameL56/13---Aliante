@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    class Ruota : Componente
+    public class Ruota : Componente
     {
         // attributi
         private Cerchione _cerchione;

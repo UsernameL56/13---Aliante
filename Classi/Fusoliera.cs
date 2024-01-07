@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classi
 {
-    class Fusoliera : Componente
+    public class Fusoliera : Componente
     {
         // attributi
         private string _materiale;
