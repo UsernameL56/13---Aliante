@@ -43,7 +43,7 @@ namespace Classi
         {
             throw new NotImplementedException();
         }
-        public override void Remove(Componente componente)
+        public override void Remove(int indice)
         {
             throw new NotImplementedException();
         }

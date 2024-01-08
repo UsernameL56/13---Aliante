@@ -17,6 +17,7 @@ namespace _13___Aliante
         bool coda;
         bool ruota;
         Aliante aliante;
+        Ala alaC;
         public Form1()
         {
             InitializeComponent();
@@ -35,25 +36,25 @@ namespace _13___Aliante
         private void alaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ala = true; fusoliera = false; coda = false; ruota = false;
-            groupBox1.Show();
+            groupBox1.Show(); groupBox2.Hide(); groupBox3.Hide(); groupBox4.Hide();
         }
 
         private void fusolieraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ala = false; fusoliera = true; coda = false; ruota = false;
-            groupBox2.Show();
+            groupBox1.Hide(); groupBox2.Show(); groupBox3.Hide(); groupBox4.Hide();
         }
 
         private void codaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ala = false; fusoliera = false; coda = true; ruota = false;
-            groupBox3.Show();
+            groupBox1.Hide(); groupBox2.Hide(); groupBox3.Show(); groupBox4.Hide();
         }
 
         private void ruotaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ala = false; fusoliera = false; coda = false; ruota = true;
-            groupBox4.Show();
+            groupBox1.Hide(); groupBox2.Hide(); groupBox3.Hide(); groupBox4.Show();
         }
 
         private void Aggiunta_Click(object sender, EventArgs e)
@@ -62,8 +63,8 @@ namespace _13___Aliante
             {
                 if (double.TryParse(alaLunghezza.Text, out double _alaLunghezza) && double.TryParse(alaApertura.Text, out double _alaApertura) && double.TryParse(alaPrezzo.Text, out double _alaPrezzo))
                 {
-                    Ala ala = new Ala(_alaLunghezza, _alaApertura, _alaPrezzo);
-                    aliante.Add(ala);
+                    alaC = new Ala(_alaLunghezza, _alaApertura, _alaPrezzo);
+                    aliante.Add(alaC);
                     MessageBox.Show("Operazione conclusa con successo", "info");
                     return;
                 }
@@ -116,16 +117,50 @@ namespace _13___Aliante
             }
         }
 
+        private void Cancellazione_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(indiceTextBox.Text, out int indice) && int.Parse(indiceTextBox.Text) >= 0 && int.Parse(indiceTextBox.Text) < aliante.Componenti.Count)
+            {
+                aliante.Remove(indice);
+                MessageBox.Show("Elemento eliminato correttamente", "info");
+                listView1.Clear();
+                listView1.Items.Add(aliante.Descrizione());
+                listView1.Items.Add($"Il prezzo totale è: {aliante.Costo()}");
+            }
+            else
+            {
+                MessageBox.Show("Inserire un indice valido o assicurarsi che la lista abbia almeno un elemento al suo interno", "info");
+            }
+           
+        }
+
         private void Stampa_Click(object sender, EventArgs e)
         {
             if(aliante.Componenti.Count < 1)
             {
-                MessageBox.Show("Inserire almeno un elemento nella lista");
+                MessageBox.Show("Inserire almeno un elemento nella lista", "info");
             }
             else
             {
-
+                listView1.Clear();
                 listView1.Items.Add(aliante.Descrizione());
+                listView1.Items.Add($"Il prezzo totale è: {aliante.Costo()}");
+            }
+        }
+
+        private void getChild_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(indiceTextBox.Text, out int indice) && int.Parse(indiceTextBox.Text) >= 0 && int.Parse(indiceTextBox.Text) < aliante.Componenti.Count)
+            {
+                Componente temp = aliante.getChild(indice);
+                MessageBox.Show($"All'indice: {indice}, è presente l'elemento {temp.Descrizione()}", "info");
+                listView1.Clear();
+                listView1.Items.Add(aliante.Descrizione());
+                listView1.Items.Add($"Il prezzo totale è: {aliante.Costo()}");
+            }
+            else
+            {
+                MessageBox.Show("Inserire un indice valido o assicurarsi che la lista abbia almeno un elemento al suo interno", "info");
             }
         }
     }

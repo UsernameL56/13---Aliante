@@ -28,7 +28,7 @@ namespace Classi
             get { return _apertura; }
             set 
             {
-                if (_apertura > 0)
+                if (value > 0)
                     _apertura = value;
             }
         }
@@ -52,7 +52,7 @@ namespace Classi
         {
             throw new NotImplementedException();
         }
-        public override void Remove(Componente componente)
+        public override void Remove(int indice)
         {
             throw new NotImplementedException();
         }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.Aggiunta = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Cancellazione = new System.Windows.Forms.Button();
+            this.getChild = new System.Windows.Forms.Button();
             this.Stampa = new System.Windows.Forms.Button();
             this.alaLunghezza = new System.Windows.Forms.TextBox();
             this.alaApertura = new System.Windows.Forms.TextBox();
@@ -74,6 +74,8 @@
             this.cerchioneMateriale = new System.Windows.Forms.TextBox();
             this.cerchionePollici = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.label18 = new System.Windows.Forms.Label();
+            this.indiceTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -91,23 +93,25 @@
             this.Aggiunta.UseVisualStyleBackColor = true;
             this.Aggiunta.Click += new System.EventHandler(this.Aggiunta_Click);
             // 
-            // button2
+            // Cancellazione
             // 
-            this.button2.Location = new System.Drawing.Point(151, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 59);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Cancellazione";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Cancellazione.Location = new System.Drawing.Point(151, 271);
+            this.Cancellazione.Name = "Cancellazione";
+            this.Cancellazione.Size = new System.Drawing.Size(127, 59);
+            this.Cancellazione.TabIndex = 1;
+            this.Cancellazione.Text = "Cancellazione";
+            this.Cancellazione.UseVisualStyleBackColor = true;
+            this.Cancellazione.Click += new System.EventHandler(this.Cancellazione_Click);
             // 
-            // button3
+            // getChild
             // 
-            this.button3.Location = new System.Drawing.Point(18, 336);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 59);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "getChild";
-            this.button3.UseVisualStyleBackColor = true;
+            this.getChild.Location = new System.Drawing.Point(18, 336);
+            this.getChild.Name = "getChild";
+            this.getChild.Size = new System.Drawing.Size(127, 59);
+            this.getChild.TabIndex = 2;
+            this.getChild.Text = "getChild";
+            this.getChild.UseVisualStyleBackColor = true;
+            this.getChild.Click += new System.EventHandler(this.getChild_Click);
             // 
             // Stampa
             // 
@@ -509,26 +513,45 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(306, 236);
+            this.listView1.Location = new System.Drawing.Point(352, 236);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(753, 205);
+            this.listView1.Size = new System.Drawing.Size(707, 205);
             this.listView1.TabIndex = 10;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(284, 271);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 16);
+            this.label18.TabIndex = 22;
+            this.label18.Text = "indice";
+            // 
+            // indiceTextBox
+            // 
+            this.indiceTextBox.Location = new System.Drawing.Point(284, 289);
+            this.indiceTextBox.Multiline = true;
+            this.indiceTextBox.Name = "indiceTextBox";
+            this.indiceTextBox.Size = new System.Drawing.Size(61, 28);
+            this.indiceTextBox.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1532, 453);
+            this.Controls.Add(this.indiceTextBox);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Stampa);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.getChild);
+            this.Controls.Add(this.Cancellazione);
             this.Controls.Add(this.Aggiunta);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -554,8 +577,8 @@
         #endregion
 
         private System.Windows.Forms.Button Aggiunta;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Cancellazione;
+        private System.Windows.Forms.Button getChild;
         private System.Windows.Forms.Button Stampa;
         private System.Windows.Forms.TextBox alaLunghezza;
         private System.Windows.Forms.TextBox alaApertura;
@@ -599,6 +622,8 @@
         private System.Windows.Forms.TextBox cerchionePrezzo;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox indiceTextBox;
     }
 }
 

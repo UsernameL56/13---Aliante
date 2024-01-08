@@ -29,9 +29,10 @@ namespace Classi
         {
            Componenti.Add(componente);
         }
-        public override void Remove(Componente componente)
+        public override void Remove(int indice)
         {
-            Componenti.Remove(componente);
+            if(indice >=0 && indice < Componenti.Count)
+                Componenti.RemoveAt(indice);
         }
         public override Componente getChild(int indice)
         {
