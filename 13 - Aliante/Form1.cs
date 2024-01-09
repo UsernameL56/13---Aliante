@@ -103,7 +103,10 @@ namespace _13___Aliante
                     Cerchione cerchione = new Cerchione(_cerchionePollici, cerchioneMateriale.Text, _cerchionePrezzo);
                     Gomma gomma = new Gomma(_gommaAltezza, _gommaLarghezza, _gommaRaggio, _gommaPrezzo);
 
-                    Ruota ruota = new Ruota(cerchione, gomma);
+                    Ruota ruota = new Ruota(new List<Componente>());
+                    ruota.Add(cerchione);
+                    ruota.Add(gomma);
+
                     aliante.Add(ruota);
                     MessageBox.Show("Operazione conclusa con successo", "info");
                     return;

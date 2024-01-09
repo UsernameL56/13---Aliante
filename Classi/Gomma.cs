@@ -66,7 +66,7 @@ namespace Classi
 
         public override string Descrizione()
         {
-            return $"Cerchione - Altezza: {Altezza}, Larghezza: {Larghezza}, Raggio: {Raggio}, Prezzo: {Prezzo}";
+            return $"Gomma - Altezza: {Altezza}, Larghezza: {Larghezza}, Raggio: {Raggio}, Prezzo: {Prezzo}";
         }
     }
 }

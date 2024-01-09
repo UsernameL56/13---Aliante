@@ -9,33 +9,26 @@ namespace Classi
     public class Ruota : Componente
     {
         // attributi
-        private Cerchione _cerchione;
-        private Gomma _gomma;
+        List<Componente> _componenti = new List<Componente>();
 
         // metodi accessor
-        public Cerchione Cerchione
+        public List<Componente> Componenti
         {
-            get { return _cerchione; }
-            set { _cerchione = value; }
-        }
-        public Gomma Gomma
-        {
-            get { return _gomma; }
-            set { _gomma = value; }
+            get { return _componenti; }
+            set { _componenti = value; }
         }
 
         // costruttore
-        public Ruota(Cerchione _cerchione, Gomma _gomma)
+        public Ruota(List<Componente> _componenti)
         {
-            Cerchione = _cerchione;
-            Gomma = _gomma;
+            Componenti = _componenti;
         }
 
         // metodi
 
         public override void Add(Componente componente)
         {
-            throw new NotImplementedException();
+            Componenti.Add(componente);
         }
         public override void Remove(int indice)
         {
@@ -47,11 +40,21 @@ namespace Classi
         }
         public override double Costo()
         {
-            return _cerchione.Costo() + _gomma.Costo();
+            double prezzo = 0;
+            foreach(Componente componente in Componenti)
+            {
+                prezzo += componente.Costo();
+            }
+            return prezzo;
         }
         public override string Descrizione()
         {
-            return $"Ruota - {_cerchione.Descrizione()}, {_gomma.Descrizione()}";
+            string stringa = "";
+            foreach (Componente componente in Componenti)
+            {
+                stringa += componente.Descrizione() + "\n";
+            }
+            return $"Ruota - {stringa}";
         }
     }
 }
